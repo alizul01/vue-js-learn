@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance Object Vue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 5%;
+            font-family: 'Quicksand', sand-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png" width="256px" alt="">
+        <h1>What is Vue.js?</h1>
+        <p>
+            The Progressive JavaScript Framework
+        </p>
+    </header>
+
+    <footer id="footer">
+        <p>
+            Copyright 2019
+        </p>
+    </footer>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const {
+            createApp
+        } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello From Vue!'
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
